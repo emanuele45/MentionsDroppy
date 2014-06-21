@@ -1,0 +1,57 @@
+/**
+ * Mentions Droppy
+ *
+ * @name      Mentions Droppy
+ * @copyright Mentions Droppy contributors
+ * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @version 0.1
+ *
+ */
+
+#button_mention .outer:after,
+#button_mention .listlevel2:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+#button_mention .listlevel2 .utils {
+	width: 100%;
+}
+#button_mention .listlevel2 .utils .mentions {
+	float: left;
+}
+#button_mention .listlevel2 .utils .options {
+	float:right;
+}
+#button_mention .listlevel2 .member {
+	float: left;
+	padding-right: 4px;
+}
+
+#button_mention .listlevel2 .avatar {
+	max-width: 50px;
+	max-height: 50px;
+}
+
+#button_mention .listlevel2 {
+	line-height: 1.2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+#button_mention .listlevel2 .logtime {
+	margin-left: 55px;
+}
+#button_mention .listlevel2 .message {
+	overflow: hidden;
+	line-height: 1.1em;
+}
+#button_mention .listlevel2 .message a {
+	white-space: nowrap;
+	display: inline-block;
+	max-width: 12em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+}

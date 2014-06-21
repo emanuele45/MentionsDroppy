@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<license><![CDATA[
+/**
+ * Mentions Droppy
+ *
+ * @name      Mentions Droppy
+ * @copyright Mentions Droppy contributors
+ * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @version 0.1
+ *
+ */
+	]]></license>
+	<id>emanuele:mentions_droppy</id>
+	<name>Mentions Droppy</name>
+	<version>0.1</version>
+	<type>modification</type>
+	<install for="1.0 - 1.0.99">
+		<require-file name="MentionsDroppy.subs.php" destination="SUBSDIR" />
+		<require-file name="mentions_droppy.js" destination="THEMEDIR/scripts" />
+		<require-file name="mentions_droppy.css" destination="THEMEDIR/css" />
+		<hook hook="integrate_load_theme" file="SUBSDIR/MentionsDroppy.subs.php" function="initdroppy" />
+	</install>
+	<uninstall for="1.0 - 1.0.99">
+		<remove-file name="SUBSDIR/MentionsDroppy.class.php" />
+		<remove-file name="THEMEDIR/scripts/mentions_droppy.js" />
+		<remove-file name="THEMEDIR/css/mentions_droppy.css" />
+		<hook reverse="true" hook="integrate_load_theme" file="SUBSDIR/MentionsDroppy.subs.php" function="initdroppy" />
+	</uninstall>
+</package-info>
